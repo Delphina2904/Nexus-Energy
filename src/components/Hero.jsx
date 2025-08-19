@@ -61,7 +61,7 @@ const Hero = () => {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen overflow-hidden bg-white"
+      className="relative min-h-screen overflow-hidden bg-white custom-scrollbar"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -229,16 +229,16 @@ const Hero = () => {
               >
                 <motion.button
                   onClick={scrollToCustomers}
-                  className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-12 py-5 rounded-full font-bold transition-all duration-500 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl cursor-pointer relative overflow-hidden text-lg"
+                  className="group bg-gradient-to-r from-blue-500 to-green-400 hover:from-blue-600 hover:to-green-500 text-white px-12 py-5 rounded-full font-bold transition-all duration-500 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl cursor-pointer relative overflow-hidden text-lg glow-btn"
                   whileHover={{
-                    scale: 1.02,
-                    boxShadow: "0 10px 40px rgba(59, 130, 246, 0.3)",
+                    scale: 1.05,
+                    boxShadow: "0 0 40px 10px rgba(34,197,94,0.3)",
                     y: -2,
                   }}
                   whileTap={{ scale: 0.98 }}
                   style={{ filter: "url(#textGlow)" }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-green-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                   <span className="relative z-10">Explore Our Solutions</span>
                   <ArrowRight
                     size={20}
@@ -277,6 +277,16 @@ const Hero = () => {
       </motion.div>
 
       <style>{`
+  /* Glow effect for CTA button */
+  .glow-btn {
+    box-shadow: 0 0 10px 0 rgba(59,130,246,0.18), 0 0 18px 0 rgba(34,197,94,0.12);
+    filter: drop-shadow(0 0 4px #3b82f6) drop-shadow(0 0 8px #22c55e);
+    transition: box-shadow 0.3s, filter 0.3s;
+  }
+  .glow-btn:hover, .glow-btn:focus {
+    box-shadow: 0 0 18px 4px rgba(34,197,94,0.18), 0 0 24px 0 rgba(59,130,246,0.12);
+    filter: drop-shadow(0 0 8px #22c55e) drop-shadow(0 0 12px #3b82f6);
+  }
   .liquid-text {
     transition: transform 0.2s ease-out;
   }

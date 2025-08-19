@@ -12,6 +12,8 @@ import ScrollToTop from './components/ScrollToTop'
 import Chatbot from './components/Chatbot'
 import WhatsAppButton from './components/WhatsAppButton'
 
+import VisionMission from './pages/VisionMission'
+
 const App = () => {
   return (
     <>
@@ -32,10 +34,7 @@ const App = () => {
               </>
             } />
             <Route path='/about' element={
-              <>
-                <About />
-                <Footer />
-              </>
+              <VisionMission />
             } />
             <Route path="/services" element={
               <>
