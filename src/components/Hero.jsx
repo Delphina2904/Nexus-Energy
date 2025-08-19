@@ -66,8 +66,7 @@ const Hero = () => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* Hyperspeed Background Effect */}
-      <HyperspeedBackground />
+  {/* Hyperspeed Background Effect removed as per request */}
 
       {/* Simplified SVG Filters for better performance */}
       <svg className="absolute inset-0 w-0 h-0">
@@ -396,3 +395,4 @@ const Hero = () => {
 }
 
 export default Hero
+
