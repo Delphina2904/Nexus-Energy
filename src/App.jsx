@@ -13,6 +13,8 @@ import Chatbot from './components/Chatbot'
 import WhatsAppButton from './components/WhatsAppButton'
 
 import VisionMission from './pages/VisionMission'
+import Technology from './pages/Technology'
+import Applications from './pages/Applications'
 
 const App = () => {
   return (
@@ -26,15 +28,27 @@ const App = () => {
               <>
                 <Hero />
                 <About />
+                <VisionMission />
+                <Applications />
                 <Services />
+                <Technology />
                 <Features />
                 <Customers />
                 <Contact />
                 <Footer />
               </>
             } />
+            <Route path="/technology" element={
+              <>
+                <Technology />
+                <Footer />
+              </>
+            } />
             <Route path='/about' element={
-              <VisionMission />
+              <>
+                <VisionMission />
+                <Footer />
+              </>
             } />
             <Route path="/services" element={
               <>

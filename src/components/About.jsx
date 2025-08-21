@@ -79,7 +79,7 @@ const About = () => {
             {'Nexus Energy Solutions'.split(' ').map((word, index) => (
               <span
                 key={index}
-                className="inline-block animate-fade-in-up hover:scale-105 transition-transform duration-300"
+                className="inline-block animate-fade-in-up hover:scale-105 transition-transform duration-300 font-semibold"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 {word}{' '}
@@ -152,12 +152,12 @@ const About = () => {
 
                       {/* Title */}
                       <h4 className="text-center text-lg md:text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-snug mb-2">
-                        {item.title}
+                        <span className="font-semibold">{item.title}</span>
                       </h4>
 
                       {/* Description */}
                       <p className="text-center text-sm md:text-base text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 flex-1">
-                        {item.description}
+                        <span className="font-normal">{item.description}</span>
                       </p>
 
                       {/* Arrow */}
@@ -178,38 +178,98 @@ const About = () => {
         {/* Centered Quote and CTA Section */}
         <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
           {/* Quote */}
-          <div className={`transform transition-all duration-1000 delay-1000 ${animatedItems.quote ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
+          <div className={`transform transition-all duration-1000 delay-1000 ${animatedItems.quote ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative p-6 md:p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl border border-blue-200 shadow-2xl">
               <div className="absolute top-3 md:top-4 left-3 md:left-4 text-3xl md:text-5xl text-blue-400 font-serif">"</div>
               <p className="text-lg md:text-2xl font-medium text-gray-800 italic text-center pt-4 md:pt-6 px-4 md:px-8 select-none">
-                We don't just build batteries—we architect energy ecosystems.
+                <span className="font-normal">We don't just build batteries—we architect energy ecosystems.</span>
               </p>
               <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 text-3xl md:text-5xl text-blue-400 font-serif rotate-180">"</div>
             </div>
           </div>
-
-          {/* CTA Button */}
-
         </div>
-      </div>
 
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
+        {/* Product Ecosystem Section - now outside the quote card */}
+        <div className="mt-10 text-left max-w-4xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 text-center">Nexus Energy Product Ecosystem</h3>
+          <p className="text-base md:text-lg text-gray-700 mb-6 text-center max-w-3xl mx-auto font-normal">
+            Nexus Energy’s product ecosystem is engineered to accelerate the transition to a net-zero future, delivering next-generation battery-powered solutions across diverse sectors—including quick commerce, mobility, and scalable energy storage. Our integrated approach harnesses the power of our unique technological innovations:
+          </p>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2 mt-6">Core Technology Enablers</h4>
+          <ul className="list-disc pl-6 space-y-2 mb-6 font-normal">
+            <li><span className="font-semibold text-gray-800">Active Thermal Management:</span> Precision control of battery temperatures ensures optimal performance and safety even during rapid charging or discharging.</li>
+            <li><span className="font-semibold text-gray-800">AI-Powered Battery Management System (BMS):</span> Real-time data analytics optimize every cell for peak efficiency and longevity.</li>
+            <li><span className="font-semibold text-gray-800">Life Extension Algorithm:</span> Smart software predicts and mitigates cell degradation, extending useful life to five years and beyond—all chemistries supported.</li>
+            <li><span className="font-semibold text-gray-800">Ultra-Fast Charging:</span> Proprietary Liquid Immersion Technology enables reliable 20-minute ultra charging for all product categories.</li>
+          </ul>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h5 className="text-lg font-bold text-blue-700 mb-2">1. Quick Commerce</h5>
+              <ul className="list-disc pl-6 space-y-1 font-normal">
+                <li>Ultra-fast charging, compact form-factors.</li>
+                <li>Rugged design for high throughput and reliability in last-mile delivery and logistics fleets.</li>
+                <li>Plug-and-play compatibility with e-cargo Vehicles & Scooters</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="text-lg font-bold text-blue-700 mb-2">2. Mobility Solutions</h5>
+              <ul className="list-disc pl-6 space-y-1 font-normal">
+                <li>Swappable battery modules for electric two/three-wheelers and urban EVs.</li>
+                <li>Seamless BMS integration for real-time health monitoring, range prediction, and OTA updates.</li>
+                <li>Safety-first architecture exceeding global standards.</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="text-lg font-bold text-blue-700 mb-2">3. Grid-Scale Energy Storage Systems (ESS)</h5>
+              <ul className="list-disc pl-6 space-y-1 font-normal">
+                <li>Modular battery racks supporting renewable integration, grid balancing, and backup applications.</li>
+                <li>Smart fleet management powered by AI for predictive maintenance and lifecycle optimization.</li>
+                <li>Flexible configurations: from microgrid installations to large utility-scale storage.</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="text-lg font-bold text-blue-700 mb-2">4. Residential & Commercial Storage</h5>
+              <ul className="list-disc pl-6 space-y-1 font-normal">
+                <li>Wall-mounted and stackable systems for homes and businesses.</li>
+                <li>Intelligent load-shifting and backup power management.</li>
+                <li>Solar integration for full off-grid capability.</li>
+              </ul>
+            </div>
+          </div>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2 mt-6">Ecosystem Benefits</h4>
+          <ul className="list-disc pl-6 space-y-2 mb-6 font-normal">
+            <li><span className="font-semibold text-gray-800">Rapid Deployment:</span> Standardized, interoperable modules simplify installation and scaling.</li>
+            <li><span className="font-semibold text-gray-800">Sustainability:</span> Prolonged cell life reduces waste and total lifecycle emissions.</li>
+            <li><span className="font-semibold text-gray-800">Reliability:</span> Advanced BMS and thermal controls drastically reduce failure rates.</li>
+            <li><span className="font-semibold text-gray-800">Versatility:</span> Solutions are chemistry-agnostic, supporting innovations from LFP to solid-state.</li>
+          </ul>
+          <h4 className="text-xl font-semibold text-indigo-700 mb-2 mt-6">End-to-End Platform</h4>
+          <p className="text-base md:text-lg text-gray-700 mb-4 font-normal">
+            From connected batteries feeding performance data to a unified cloud, to AI-driven optimization for operators and users, Nexus Energy’s ecosystem delivers maximum value throughout the product lifecycle, supporting partners with:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 mb-6">
+            <li>API Access & Integration Tools</li>
+            <li>Remote Diagnostics & Updates</li>
+            <li>Circularity & Second-Life Programs</li>
+          </ul>
+          <p className="text-lg font-semibold text-blue-900 text-center mt-8">Nexus Energy ecosystem: innovating today, powering tomorrow’s sustainable, electrified world.</p>
+        </div>
+        <style jsx>{`
+          @keyframes fade-in-up {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+          .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
           }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-        }
-      `}</style>
+        `}</style>
+      </div>
     </div>
   );
 };

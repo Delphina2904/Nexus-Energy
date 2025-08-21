@@ -52,7 +52,7 @@ const VisionMission = memo(() => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 leading-tight">
                 Our{" "}
                 <span className="relative">
                   Vision & Mission
@@ -65,7 +65,7 @@ const VisionMission = memo(() => {
                 </span>
               </h1>
               <motion.p
-                className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-normal"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -90,7 +90,7 @@ const VisionMission = memo(() => {
                 <div className="w-12 sm:w-16 h-1 bg-blue-500 mr-3 sm:mr-4"></div>
                 <span className="text-blue-500 font-medium text-base sm:text-lg">Vision</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 max-w-4xl leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 sm:mb-8 max-w-4xl leading-tight">
                 Envisioning a{" "}
                 <span className="relative">
                   Sustainable Future
@@ -145,13 +145,13 @@ const VisionMission = memo(() => {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <span className="text-white text-3xl">🌍</span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                     Our Vision
                   </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 font-normal">
                     To be the global leader in advanced energy storage solutions, enabling a world where clean, efficient, and sustainable energy powers every aspect of human life.
                   </p>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-700 text-lg leading-relaxed font-normal">
                     We envision a future where energy storage is seamlessly integrated into every facet of society—from personal mobility to industrial operations—creating a carbon-neutral world powered by innovation and responsibility.
                   </p>
                 </div>
@@ -166,19 +166,25 @@ const VisionMission = memo(() => {
               >
                 {[
                   {
-                    icon: "🚀",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    ),
                     title: "Innovation Leadership",
                     description: "Pioneering breakthrough technologies that redefine energy storage possibilities.",
                     color: "from-blue-500 to-indigo-500"
                   },
                   {
-                    icon: "🌱",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 1.343-3 3 0 2.5 3 7 3 7s3-4.5 3-7c0-1.657-1.343-3-3-3z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8V4m0 0C7.582 4 4 7.582 4 12c0 4.418 3.582 8 8 8s8-3.582 8-8c0-4.418-3.582-8-8-8z" /></svg>
+                    ),
                     title: "Environmental Stewardship",
                     description: "Creating solutions that protect and preserve our planet for future generations.",
                     color: "from-green-500 to-emerald-500"
                   },
                   {
-                    icon: "🤝",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m9-4a4 4 0 10-8 0 4 4 0 008 0zm6 4v2a2 2 0 01-2 2h-1.5M3 16v2a2 2 0 002 2h1.5" /></svg>
+                    ),
                     title: "Global Impact",
                     description: "Empowering communities worldwide with accessible, reliable energy solutions.",
                     color: "from-purple-500 to-pink-500"
@@ -198,7 +204,7 @@ const VisionMission = memo(() => {
                         <span className="text-white text-xl">{item.icon}</span>
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h4>
                         <p className="text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -223,7 +229,7 @@ const VisionMission = memo(() => {
                 <div className="w-12 sm:w-16 h-1 bg-red-500 mr-3 sm:mr-4"></div>
                 <span className="text-red-500 font-medium text-base sm:text-lg">Mission</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 max-w-4xl leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 sm:mb-8 max-w-4xl leading-tight">
                 Driving{" "}
                 <span className="relative">
                   Innovation Forward
@@ -248,18 +254,27 @@ const VisionMission = memo(() => {
               >
                 {[
                   {
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+                    ),
                     number: "01",
                     title: "Advanced Technology Development",
                     description: "Continuously innovating cutting-edge energy storage technologies, including immersion cooling systems, smart battery management, and AI-driven optimization platforms.",
                     color: "from-red-500 to-orange-500"
                   },
                   {
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2M7 7a4 4 0 018 0v4a4 4 0 01-8 0V7z" /></svg>
+                    ),
                     number: "02",
                     title: "Sustainable Manufacturing",
                     description: "Implementing eco-friendly production processes and circular economy principles to minimize environmental impact while maximizing product quality and performance.",
                     color: "from-orange-500 to-yellow-500"
                   },
                   {
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m9-4a4 4 0 10-8 0 4 4 0 008 0zm6 4v2a2 2 0 01-2 2h-1.5M3 16v2a2 2 0 002 2h1.5" /></svg>
+                    ),
                     number: "03",
                     title: "Strategic Partnerships",
                     description: "Building collaborative relationships with industry leaders, research institutions, and communities to accelerate the adoption of clean energy solutions.",
@@ -276,11 +291,11 @@ const VisionMission = memo(() => {
                     whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                   >
                     <div className="flex items-start">
-                      <div className={`w-14 h-14 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mr-6 flex-shrink-0`}>
-                        <span className="text-white font-bold text-lg">{item.number}</span>
+                        <div className={`w-14 h-14 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mr-6 flex-shrink-0`}>
+                          <span className="text-white font-semibold text-lg flex items-center gap-2">{item.icon}<span>{item.number}</span></span>
                       </div>
                       <div>
-                        <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{item.title}</h4>
+                        <h4 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h4>
                         <p className="text-gray-600 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
@@ -298,18 +313,18 @@ const VisionMission = memo(() => {
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                     <span className="text-white text-3xl">🎯</span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
                     Our Mission
                   </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 font-normal">
                     To revolutionize energy storage through innovative thermal management solutions, making clean energy more efficient, accessible, and reliable for all.
                   </p>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 font-normal">
                     We are committed to developing breakthrough technologies that solve real-world energy challenges while fostering sustainable growth and environmental responsibility.
                   </p>
                   
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Core Commitments</h4>
+                    <h4 className="text-xl font-semibold text-gray-900 mb-4">Core Commitments</h4>
                     <ul className="space-y-3">
                       {[
                         "Delivering superior performance and safety",
@@ -345,7 +360,7 @@ const VisionMission = memo(() => {
                 <span className="text-purple-500 font-medium text-base sm:text-lg">Values</span>
                 <div className="w-12 sm:w-16 h-1 bg-purple-500 ml-3 sm:ml-4"></div>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-6 sm:mb-8">
                 Our Core{" "}
                 <span className="relative">
                   Values
@@ -366,37 +381,49 @@ const VisionMission = memo(() => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: "⚡",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  ),
                   title: "Innovation",
                   description: "We constantly push boundaries to create groundbreaking solutions that transform industries.",
                   color: "from-yellow-500 to-orange-500"
                 },
                 {
-                  icon: "🛡️",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+                  ),
                   title: "Integrity",
                   description: "We operate with transparency, honesty, and ethical practices in all our relationships.",
                   color: "from-blue-500 to-indigo-500"
                 },
                 {
-                  icon: "🌟",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 1.343-3 3 0 2.5 3 7 3 7s3-4.5 3-7c0-1.657-1.343-3-3-3z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8V4m0 0C7.582 4 4 7.582 4 12c0 4.418 3.582 8 8 8s8-3.582 8-8c0-4.418-3.582-8-8-8z" /></svg>
+                  ),
                   title: "Excellence",
                   description: "We strive for the highest quality in everything we do, from products to customer service.",
                   color: "from-purple-500 to-pink-500"
                 },
                 {
-                  icon: "🤝",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m9-4a4 4 0 10-8 0 4 4 0 008 0zm6 4v2a2 2 0 01-2 2h-1.5M3 16v2a2 2 0 002 2h1.5" /></svg>
+                  ),
                   title: "Collaboration",
                   description: "We believe in the power of partnerships and teamwork to achieve greater impact.",
                   color: "from-green-500 to-emerald-500"
                 },
                 {
-                  icon: "🌱",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 1.343-3 3 0 2.5 3 7 3 7s3-4.5 3-7c0-1.657-1.343-3-3-3z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8V4m0 0C7.582 4 4 7.582 4 12c0 4.418 3.582 8 8 8s8-3.582 8-8c0-4.418-3.582-8-8-8z" /></svg>
+                  ),
                   title: "Sustainability",
                   description: "We are committed to environmental responsibility and creating a sustainable future.",
                   color: "from-emerald-500 to-teal-500"
                 },
                 {
-                  icon: "🎯",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  ),
                   title: "Customer Focus",
                   description: "We prioritize our customers' needs and success in every decision we make.",
                   color: "from-red-500 to-pink-500"
@@ -414,8 +441,8 @@ const VisionMission = memo(() => {
                   <div className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                     <span className="text-white text-2xl">{value.icon}</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed font-normal">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -423,7 +450,7 @@ const VisionMission = memo(() => {
         </section>
       </main>
       
-      <Footer />
+  {/* Footer removed to avoid duplicate on home page */}
     </motion.div>
   );
 });
